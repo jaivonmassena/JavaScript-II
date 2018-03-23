@@ -33,10 +33,13 @@ class User {
 // code here
 class Animal {
   constructor(options) {
-    this.age = this.options;
+    this.age = options.age;
   }
   growOlder() {
     return ++this.age;
+  }
+  grow() {
+    console.log(`${this.name} grew larger!`);
   }
 }
 
@@ -49,6 +52,14 @@ class Cat extends Animal {
     return `${this.name} meowed!`;
   }
 }
+//
+// const bootsie = new Cat({name:"Bootsie", age: 3})
+// console.log(bootsie.growOlder());
+//
+// const obj = {num:1};
+//
+// console.log(obj.num + 1);
+
 
 /* eslint-disable no-undef */
 
